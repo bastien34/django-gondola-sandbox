@@ -1,0 +1,13 @@
+{% load static %}
+
+<ul class="c-grid-row">
+    {% for gondola in gondole %}
+        <li class="g-{{ gondola.type }}">
+            <span class="grid-content-wrapper">
+                <a href="{{ gondola.link_to }}" class="g-grid-content">
+                    <img src="{% static "{{ gondola.url }}" %}" alt="" />
+                </a>
+            </span>
+        </li>
+    {% endfor %}
+</ul>
