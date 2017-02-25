@@ -32,12 +32,12 @@ class ImageWidgetAdmin(admin.ModelAdmin):
 
 
 class GondoleRowAdmin(admin.ModelAdmin):
-    fields = ['image_1', 'image_2', 'image_3']
+    fields = ['label', 'images', ('position', 'active')]
     list_display = ('label', 'created', 'active',)
 
 
 class GondolaAdmin(admin.ModelAdmin):
-    fields = ['link_to', 'image', 'label', 'description']
+    fields = ['link_to', 'image', 'label', 'description', 'position']
 
 
 admin.site.register(GondoleRow, GondoleRowAdmin)
