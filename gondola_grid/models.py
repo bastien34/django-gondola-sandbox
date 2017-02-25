@@ -100,7 +100,9 @@ class GondoleRow(models.Model):
     active = models.BooleanField(default=True)
     label = models.CharField(max_length=250, default='Gondola row')
     position = models.SmallIntegerField(default=1)
-    images = models.ManyToManyField(Gondola)
+    images = models.ManyToManyField(
+        Gondola,
+        help_text="Select at least 2 rectangles or 1 rectangle and 2 squares.")
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
@@ -113,7 +115,7 @@ class GondoleRow(models.Model):
     def __str__(self):
         return self.label
 
-    def save(self):
+    def save(self, *args, **kwargs):
         """
         We limit the use of row to few combination of images. We rely on
         the number of gondole attached to the row and therefore on the total
@@ -129,7 +131,7 @@ class GondoleRow(models.Model):
         except AssertionError:
             raise AssertionError("You didn't fill all the image fields!")
 
-        return super().save()
+        super().save(*args, **kwargs)
 
     def _get_total_width(self):
         return sum([i.width for i in self.images.all()])

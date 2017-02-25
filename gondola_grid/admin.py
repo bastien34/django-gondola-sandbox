@@ -33,6 +33,7 @@ class ImageWidgetAdmin(admin.ModelAdmin):
 
 class GondoleRowAdmin(admin.ModelAdmin):
     fields = ['label', 'images', ('position', 'active')]
+    filter_horizontal = ('images',)
     list_display = ('label', 'created', 'active',)
 
 
