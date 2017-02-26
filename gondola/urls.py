@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.conf import settings
 from django.views.static import serve
 
+from gondola_grid.views import homepage
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', homepage, name='index'),
 ]
 
 if settings.DEBUG:

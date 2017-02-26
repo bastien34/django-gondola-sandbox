@@ -137,7 +137,7 @@ class GondoleRow(models.Model):
         return sum([i.width for i in self.images.all()])
 
     def as_html(self):
-        t = get_template('gondola_grid/grid.html')
+        t = get_template('gondola_grid/gondola_row.html')
         context = {
             'gondole': self.images.all()
         }
