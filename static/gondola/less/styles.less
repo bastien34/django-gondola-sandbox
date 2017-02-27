@@ -1,10 +1,5 @@
 //  Grid gondole
 
-body {
-  padding: 20px;
-  margin: 0;
-}
-
 .gondola_wrapper {
   margin: 0 auto 20px auto;
   width: 100%;
@@ -12,14 +7,7 @@ body {
   display: block;
   position: relative;
   padding: 0 10px;
-
-  li, ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    -webkit-padding-start: 0;
-    -moz-padding-start: 0;
-  }
+  box-sizing: border-box;
 
   &:after {
     content: '';
@@ -29,60 +17,40 @@ body {
   }
 
   .gondola-row {
-    width: 100%;
-    margin: auto;
+    padding: 0;
   }
 
-  .gondola-content-wrapper {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+  li, ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-
-    img {
-      padding: 10px;
-      width: 100%;
-    }
   }
 
-  .gondola-content {
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .g-rectangle {
-    width: 50%;
+  .gondola-mixin {
     display: inline-block;
     float: left;
     overflow: hidden;
     position: relative;
-
     &:after {
       content: '';
       display: block;
+    }
+  }
+
+  .g-rectangle {
+    width: 50%;
+    .gondola-mixin;
+    &:after {
       padding-bottom: 50%;
     }
   }
 
   .g-square {
     width: 25%;
-    display: inline-block;
-    float: left;
-    overflow: hidden;
-    position: relative;
-
     &:after {
-      content: '';
-      display: block;
       padding-bottom: 100%;
     }
+    .gondola-mixin;
   }
 
   @media only screen and (max-width: 640px) {
@@ -92,17 +60,49 @@ body {
         padding-bottom: 50%;
       }
     }
+  }
+
+  .gondola-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
 
   }
 
-  li img {
-    opacity: 1;
-    -webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+  img {
+    width: 100%;
+    filter: brightness(90%);
+    &:hover {
+      filter: brightness(50%);
+    }
   }
 
-  li:hover img {
-    opacity: .5;
+  .gondola-content {
+    width: 100%;
   }
 
+  .gondola-text {
+    position: absolute;
+    width: 100%;
+    display: block;
+    top:50%;
+    left:0;
+    transform: translate(0, -50%);
+  }
+
+  .g-label {
+    display: block;
+    color: white;
+    padding: 0 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.1;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+  }
 }

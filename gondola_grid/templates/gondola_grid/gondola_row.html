@@ -1,13 +1,24 @@
 {% load static %}
 
 <ul class="gondola-row">
-    {% for gondola in gondole %}
-        <li class="g-{{ gondola.type }}">
-            <span class="gondola-content-wrapper">
-                <a href="{{ gondola.link_to }}" class="gondola-content">
-                    <img src="{{ gondola.url }}" alt="" />
-                </a>
-            </span>
-        </li>
-    {% endfor %}
+
+  {% for gondola in gondole %}
+    <li class="g-{{ gondola.type }}">
+      <span class="gondola-content-wrapper">
+
+        <a href="{{ gondola.link_to }}" class="gondola-content">
+
+          {# Gondola image #}
+          <img src="{{ gondola.url }}" alt="" class=""/>
+
+          {# Gondoal label & description #}
+          <span class="gondola-text">
+            <span class="g-label">{{ gondola.label }}</span>
+          </span>
+        </a>
+
+      </span>
+    </li>
+  {% endfor %}
+
 </ul>
