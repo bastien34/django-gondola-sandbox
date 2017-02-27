@@ -99,6 +99,17 @@
     }
 },
 {
+    "model": "gondola_grid.gondola",
+    "pk": 13,
+    "fields": {
+        "label": "Who's that?",
+        "image": "fish_rectangle_2.jpg",
+        "link_to": "",
+        "description": "You're not funny",
+        "position": 1
+    }
+},
+{
     "model": "gondola_grid.gondolerow",
     "pk": 1,
     "fields": {
@@ -154,10 +165,10 @@
         "label": "Gondola row",
         "position": 1,
         "created": "2017-02-27T15:07:01.091Z",
-        "modified": "2017-02-27T15:07:01.091Z",
+        "modified": "2017-02-27T16:43:28.852Z",
         "images": [
             2,
-            4
+            13
         ]
     }
 }
