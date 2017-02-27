@@ -115,23 +115,23 @@ class GondoleRow(models.Model):
     def __str__(self):
         return self.label
 
-    def save(self, *args, **kwargs):
-        """
-        We limit the use of row to few combination of images. We rely on
-        the number of gondole attached to the row and therefore on the total
-        width.
-        """
-
-        # TODO: this validation
-
-        allowed_width = 1160
-
-        try:
-            assert(self._get_total_width() == allowed_width)
-        except AssertionError:
-            raise AssertionError("You didn't fill all the image fields!")
-
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     """
+    #     We limit the use of row to few combination of images. We rely on
+    #     the number of gondole attached to the row and therefore on the total
+    #     width.
+    #     """
+    #
+    #     # TODO: this validation
+    #
+    #     allowed_width = 1160
+    #
+    #     try:
+    #         assert(self._get_total_width() == allowed_width)
+    #     except AssertionError:
+    #         raise AssertionError("You didn't fill all the image fields!")
+    #
+    #     super().save(*args, **kwargs)
 
     def _get_total_width(self):
         return sum([i.width for i in self.images.all()])
@@ -142,6 +142,3 @@ class GondoleRow(models.Model):
             'gondole': self.images.all()
         }
         return t.render(context)
-
-
-
