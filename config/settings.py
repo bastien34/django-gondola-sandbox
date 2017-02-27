@@ -129,10 +129,10 @@ USE_TZ = True
 
 
 MEDIA_ROOT = BASE_DIR.child('media')
-STATIC_ROOT = BASE_DIR.child('static')
+STATIC_ROOT = BASE_DIR.child('assets')
 
 STATICFILES_DIRS = (
-    BASE_DIR.child('assets'),
+    BASE_DIR.child('static'),
 )
 
 STATIC_URL = '/static/'

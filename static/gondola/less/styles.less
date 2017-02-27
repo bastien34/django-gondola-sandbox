@@ -1,0 +1,106 @@
+//  Grid gondole
+
+body {
+  padding: 20px;
+  margin: 0;
+  -webkit-padding-start: 0;
+}
+
+ul, menu, dir {
+
+}
+
+
+.gondola_wrapper {
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  position: relative;
+  padding: 0 10px;
+
+  li, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    display: block;
+    clear: both;
+  }
+
+  .gondola-row {
+    width: 100%;
+    margin: auto;
+  }
+
+  .gondola-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+    img {
+      padding: 10px;
+      width: 100%;
+    }
+
+  }
+
+  .g-rectangle {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 50%;
+    }
+  }
+
+  .g-square {
+    width: 25%;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    position: relative;
+
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .g-square, .g-rectangle {
+      width: 100%;
+      &:after {
+        padding-bottom: 50%;
+      }
+    }
+
+  }
+
+  .g-grid-content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+
+}

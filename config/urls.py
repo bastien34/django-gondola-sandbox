@@ -28,7 +28,6 @@ urlpatterns = [
 if settings.DEBUG:
     # static files (images, css, javascript, etc.)
     urlpatterns += [
-
         url(r'^media/(?P<path>.*)$', serve, {
             'document_root': settings.MEDIA_ROOT}),
     ]
