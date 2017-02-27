@@ -5,3 +5,7 @@ media/
 # Byte-compiled / optimized / DLL files
 __pycache__
 *.py[cod]
+
+# nodeenv
+js_virtualenv/
+node_modules/
