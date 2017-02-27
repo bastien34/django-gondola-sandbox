@@ -47,7 +47,14 @@ body {
       padding: 10px;
       width: 100%;
     }
+  }
 
+  .gondola-content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
   }
 
   .g-rectangle {
@@ -71,7 +78,6 @@ body {
     overflow: hidden;
     position: relative;
 
-
     &:after {
       content: '';
       display: block;
@@ -89,12 +95,14 @@ body {
 
   }
 
-  .g-grid-content {
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    position: relative;
+  li img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  }
+
+  li:hover img {
+    opacity: .5;
   }
 
 }
