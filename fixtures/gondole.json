@@ -1,0 +1,164 @@
+[
+{
+    "model": "gondola_grid.gondola",
+    "pk": 1,
+    "fields": {
+        "label": "Chameleon",
+        "image": "chameleon_rectangle_1.jpg",
+        "link_to": "/",
+        "description": "Nice, isn't it?",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 2,
+    "fields": {
+        "label": "Toucan",
+        "image": "toucan_rectangle_1.jpg",
+        "link_to": "/",
+        "description": "What a colored bird!",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 3,
+    "fields": {
+        "label": "Monkey",
+        "image": "monkey_square_1.jpg",
+        "link_to": "/",
+        "description": "Maybe me?",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 4,
+    "fields": {
+        "label": "Laying on the back",
+        "image": "cat_rectangle.png",
+        "link_to": "9",
+        "description": "Fun to be a cat",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 5,
+    "fields": {
+        "label": "Kiss me",
+        "image": "fish_square_1.jpg",
+        "link_to": "",
+        "description": "and get the moon",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 6,
+    "fields": {
+        "label": "My tongue",
+        "image": "cat_square.png",
+        "link_to": "",
+        "description": "humm",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 7,
+    "fields": {
+        "label": "One family",
+        "image": "fish_square_2.jpg",
+        "link_to": "/",
+        "description": "In blue",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 8,
+    "fields": {
+        "label": "Sadness",
+        "image": "cat_square_1.jpg",
+        "link_to": "",
+        "description": "Thinking of death",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondola",
+    "pk": 9,
+    "fields": {
+        "label": "Am I pretty?",
+        "image": "flower_square_1.jpg",
+        "link_to": "/",
+        "description": "I'm a square",
+        "position": 1
+    }
+},
+{
+    "model": "gondola_grid.gondolerow",
+    "pk": 1,
+    "fields": {
+        "active": true,
+        "label": "Gondola 2R",
+        "position": 1,
+        "created": "2017-02-27T08:21:06.474Z",
+        "modified": "2017-02-27T08:21:06.474Z",
+        "images": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "gondola_grid.gondolerow",
+    "pk": 2,
+    "fields": {
+        "active": true,
+        "label": "Gondola row",
+        "position": 1,
+        "created": "2017-02-27T09:18:06.859Z",
+        "modified": "2017-02-27T09:18:06.859Z",
+        "images": [
+            3,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "gondola_grid.gondolerow",
+    "pk": 3,
+    "fields": {
+        "active": true,
+        "label": "Gondola row",
+        "position": 1,
+        "created": "2017-02-27T09:52:05.628Z",
+        "modified": "2017-02-27T09:52:05.628Z",
+        "images": [
+            6,
+            7,
+            8,
+            9
+        ]
+    }
+},
+{
+    "model": "gondola_grid.gondolerow",
+    "pk": 4,
+    "fields": {
+        "active": true,
+        "label": "Gondola row",
+        "position": 1,
+        "created": "2017-02-27T15:07:01.091Z",
+        "modified": "2017-02-27T15:07:01.091Z",
+        "images": [
+            2,
+            4
+        ]
+    }
+}
+]
