@@ -1,4 +1,9 @@
 /* Mixin */
+.gondole-dashboard {
+  margin: 20px auto;
+  padding: 20px 40px;
+  max-width: 1200px;
+}
 .gondole-dashboard .main {
   display: flex;
 }
@@ -20,4 +25,5 @@
 .gondole-dashboard .row-display img {
   width: auto;
   height: 80px;
+  padding: 2px;
 }

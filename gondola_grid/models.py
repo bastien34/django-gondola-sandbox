@@ -67,7 +67,7 @@ class GondoleRow(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["active", "modified", "created"]
+        ordering = ["active", 'position', "modified", "created"]
         verbose_name = "Gondole row"
         verbose_name_plural = "Gondole rows"
 
