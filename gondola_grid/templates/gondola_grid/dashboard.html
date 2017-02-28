@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Gondola project {{ version }}]</title>
+    <title>Gondole Dashboard {{ version }}]</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="{% static 'gondola/css/styles.css' %}" />
 </head>
@@ -11,12 +11,11 @@
 <body>
 
 <h1>Gondola example</h1>
-<a href="">Link to dashboard (TODO)</a> |
-<a href="/admin">Django admin</a> |
-<a href="/?init=yes">Load demo?</a>
+<a href="{% url 'index' %}">Homepage</a> |
+<a href="/admin">Django admin</a>
+{#<a href="/?init=yes">Load demo?</a>#}
+
 
 {% gondola %}
 
 </body>
-
-

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gondola_grid',
     'django_extensions',
+    'demo',
 ]
 
 MIDDLEWARE = [
