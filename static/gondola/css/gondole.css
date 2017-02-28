@@ -81,7 +81,6 @@
 }
 .gondole img {
   width: 100%;
-  filter: brightness(90%);
 }
 .gondole img:hover {
   filter: brightness(50%);
@@ -89,13 +88,27 @@
 .gondole .gondola-content {
   width: 100%;
 }
+.gondole .gondola-overlay {
+  filter: brightness(90%);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.gondole .gondola-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-duration: 0.4s;
+  animation-name: slideup;
+}
 .gondole .gondola-text {
   position: absolute;
   width: 100%;
   display: block;
   top: 50%;
   left: 0;
-  transform: translate(0, -50%);
 }
 .gondole .g-label {
   display: block;
@@ -106,5 +119,12 @@
   text-align: center;
   word-wrap: break-word;
   line-height: 1.1;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+@keyframes slideup {
+  from {
+    padding-bottom: 0;
+  }
+  to {
+    padding-top: 20%;
+  }
 }

@@ -66,7 +66,6 @@ gondole_create_view = GondoleRowCreateView.as_view()
 class GondoleRowDeleteView(DeleteView):
     model = GondoleRow
     template_name = 'gondola_grid/dashboard/gondolerow_form.html'
-    # fields = ('label', 'active', 'position', 'images')
     success_url = reverse_lazy('gondole:gondole-list')
 
 
@@ -78,8 +77,8 @@ gondole_delete_view = GondoleRowDeleteView.as_view()
 
 class GondolaRowUpdateView(UpdateView):
     model = Gondola
-    template_name = 'gondola_grid/dashboard/gondolerow_form.html'
     fields = ('label', 'description', 'link_to', 'position', 'image')
+    template_name = 'gondola_grid/dashboard/gondolerow_form.html'
 
 
 gondola_update_view = GondolaRowUpdateView.as_view()
@@ -98,7 +97,6 @@ class GondolaRowDeleteView(DeleteView):
     model = Gondola
     success_url = reverse_lazy('gondole:gondole-list')
     template_name = 'gondola_grid/dashboard/gondolerow_form.html'
-    # fields = ('label', 'active', 'position', 'image')
 
 
 gondola_delete_view = GondolaRowDeleteView.as_view()
