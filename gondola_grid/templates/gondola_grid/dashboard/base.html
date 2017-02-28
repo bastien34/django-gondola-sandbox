@@ -1,0 +1,30 @@
+{% load gondola static i18n %}
+{% load render_table from django_tables2 %}
+
+<!DOCTYPE html>
+
+<head>
+  <title>Gondole Dashboard {{ version }}]</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="{% static 'gondola/css/gondole_dashboard.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'gondola/css/gondole.css' %}" />
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="{% url 'index' %}">Homepage</a></li>
+    <li><a href="/admin">Django admin</a>
+    </li>
+  </ul>
+</nav>
+
+<section class="gondole-dashboard">
+
+  {% block main_section %}{% endblock %}
+
+</section>
+
+
+</body>

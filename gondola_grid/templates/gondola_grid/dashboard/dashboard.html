@@ -1,0 +1,43 @@
+{% extends './base.html' %}
+
+{% load gondola static i18n %}
+{% load render_table from django_tables2 %}
+
+
+{% block main_section %}
+
+  <article>
+    <h1>{% trans "Gondole content management" %}</h1>
+
+    <div class="main">
+      {% blocktrans %}
+        <div class="left-comment">
+        <p>
+          Gondole are made to highlight ideas, section, products range, promotion... whatever you want to highlight with a short text, a short description and a nice picture.
+        </p>
+        <p>
+          We offer the ability of having head of gondole nicely presented in a grid with a pure HTML - CSS3 animation.
+        </p>
+        <p>
+          Have fun !
+        </p>
+      {% endblocktrans %}
+      <form action="{% url "gondole:gondole-create" %}">
+        <input type="submit" value="{% trans "Create a gondole row" %}" />
+      </form>
+      </div>
+
+      <div class="aside-gondola">
+        {% gondola %}
+      </div>
+    </div>
+
+    <h2>{% trans "Active gondole rows" %}</h2>
+    {% render_table active_gondole %}
+
+    <h2>{% trans "Inactive gondole rows" %}</h2>
+    {% render_table object_list %}
+
+  </article>
+
+{% endblock %}

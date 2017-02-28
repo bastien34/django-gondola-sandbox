@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.loader import get_template
+from django.urls.base import reverse
 
 from .validators import validate_gondola
 
@@ -100,3 +101,7 @@ class GondoleRow(models.Model):
             'gondole': self.images.all()
         }
         return t.render(context)
+
+    def get_absolute_url(self):
+        # return reverse('dashboard', kwargs={'pk': self.pk})
+        return reverse('gondole:dashboard')
