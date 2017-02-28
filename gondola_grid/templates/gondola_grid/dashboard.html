@@ -1,21 +1,59 @@
-{% load gondola static %}
+{% load gondola static i18n %}
+{% load render_table from django_tables2 %}
 
 <!DOCTYPE html>
 
 <head>
-    <title>Gondole Dashboard {{ version }}]</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="{% static 'gondola/css/styles.css' %}" />
+  <title>Gondole Dashboard {{ version }}]</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="{% static 'gondola/css/gondole_dashboard.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'gondola/css/gondole.css' %}" />
 </head>
 
 <body>
 
-<h1>Gondola example</h1>
-<a href="{% url 'index' %}">Homepage</a> |
-<a href="/admin">Django admin</a>
+<nav>
+  <ul>
+    <li><a href="{% url 'index' %}">Homepage</a></li>
+    <li><a href="/admin">Django admin</a>
+    </li>
+  </ul>
+</nav>
+
 {#<a href="/?init=yes">Load demo?</a>#}
+<section class="gondole-dashboard">
+  <article>
+    <h1>{% trans "Gondole content management" %}</h1>
 
+    <div class="main">
+      {% blocktrans %}
+        <div class="left-comment">
+          <p>
+            Gondole are made to highlight ideas, section, products range, promotion... whatever you want to highlight with a short text, a short description and a nice picture.
+          </p>
+          <p>
+            We offer the ability of having head of gondole nicely presented in a grid with a pure HTML - CSS3 animation.
+          </p>
+          <p>
+            Have fun !
+          </p>
+        </div>
+      {% endblocktrans %}
 
-{% gondola %}
+      <div class="aside-gondola">
+        {% gondola %}
+      </div>
+    </div>
+
+    <h2>{% trans "Active gondole rows" %}</h2>
+    {% render_table active_gondole %}
+
+    <h2>{% trans "Inactive gondole rows" %}</h2>
+    {% render_table object_list %}
+
+  </article>
+
+</section>
+
 
 </body>

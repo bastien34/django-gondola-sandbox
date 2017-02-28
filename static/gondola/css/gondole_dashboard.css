@@ -1,0 +1,15 @@
+/* Mixin */
+.gondole-dashboard .main {
+  display: flex;
+}
+.gondole-dashboard .left-comment {
+  width: 75%;
+}
+.gondole-dashboard .aside-gondola {
+  width: 50%;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}

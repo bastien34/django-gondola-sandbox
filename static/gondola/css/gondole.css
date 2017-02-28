@@ -1,4 +1,4 @@
-.gondola_wrapper {
+.gondole {
   margin: 0 auto 20px auto;
   width: 100%;
   max-width: 1200px;
@@ -7,70 +7,70 @@
   padding: 0 10px;
   box-sizing: border-box;
 }
-.gondola_wrapper:after {
+.gondole:after {
   content: '';
   width: 100%;
   display: block;
   clear: both;
 }
-.gondola_wrapper .gondola-row {
+.gondole .gondola-row {
   padding: 0;
 }
-.gondola_wrapper li,
-.gondola_wrapper ul {
+.gondole li,
+.gondole ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.gondola_wrapper .gondola-mixin {
+.gondole .gondola-mixin {
   display: inline-block;
   float: left;
   overflow: hidden;
   position: relative;
 }
-.gondola_wrapper .gondola-mixin:after {
+.gondole .gondola-mixin:after {
   content: '';
   display: block;
 }
-.gondola_wrapper .g-rectangle {
+.gondole .g-rectangle {
   width: 50%;
   display: inline-block;
   float: left;
   overflow: hidden;
   position: relative;
 }
-.gondola_wrapper .g-rectangle:after {
+.gondole .g-rectangle:after {
   content: '';
   display: block;
 }
-.gondola_wrapper .g-rectangle:after {
+.gondole .g-rectangle:after {
   padding-bottom: 50%;
 }
-.gondola_wrapper .g-square {
+.gondole .g-square {
   width: 25%;
   display: inline-block;
   float: left;
   overflow: hidden;
   position: relative;
 }
-.gondola_wrapper .g-square:after {
+.gondole .g-square:after {
   padding-bottom: 100%;
 }
-.gondola_wrapper .g-square:after {
+.gondole .g-square:after {
   content: '';
   display: block;
 }
 @media only screen and (max-width: 640px) {
-  .gondola_wrapper .g-square,
-  .gondola_wrapper .g-rectangle {
+  .gondole .g-square,
+  .gondole .g-rectangle {
     width: 100%;
   }
-  .gondola_wrapper .g-square:after,
-  .gondola_wrapper .g-rectangle:after {
+  .gondole .g-square:after,
+  .gondole .g-rectangle:after {
     padding-bottom: 50%;
   }
 }
-.gondola_wrapper .gondola-content-wrapper {
+.gondole .gondola-content-wrapper {
   width: 100%;
   height: 100%;
   display: block;
@@ -79,17 +79,17 @@
   left: 0;
   padding: 10px;
 }
-.gondola_wrapper img {
+.gondole img {
   width: 100%;
   filter: brightness(90%);
 }
-.gondola_wrapper img:hover {
+.gondole img:hover {
   filter: brightness(50%);
 }
-.gondola_wrapper .gondola-content {
+.gondole .gondola-content {
   width: 100%;
 }
-.gondola_wrapper .gondola-text {
+.gondole .gondola-text {
   position: absolute;
   width: 100%;
   display: block;
@@ -97,7 +97,7 @@
   left: 0;
   transform: translate(0, -50%);
 }
-.gondola_wrapper .g-label {
+.gondole .g-label {
   display: block;
   color: white;
   padding: 0 20px;
