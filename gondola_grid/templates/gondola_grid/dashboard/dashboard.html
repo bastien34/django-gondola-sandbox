@@ -4,6 +4,10 @@
 {% load render_table from django_tables2 %}
 
 
+{% block extra_nav %}
+{% endblock %}
+
+
 {% block main_section %}
 
   <article>
@@ -22,8 +26,8 @@
           Have fun !
         </p>
       {% endblocktrans %}
-      <form action="{% url "gondole:gondole-create" %}">
-        <input type="submit" value="{% trans "Create a gondole row" %}" />
+      <form action="{% url "gondole:gondole-list" %}">
+        <input type="submit" value="{% trans "Manage a gondole row" %}" />
       </form>
       </div>
 
@@ -31,12 +35,6 @@
         {% gondola %}
       </div>
     </div>
-
-    <h2>{% trans "Active gondole rows" %}</h2>
-    {% render_table active_gondole %}
-
-    <h2>{% trans "Inactive gondole rows" %}</h2>
-    {% render_table object_list %}
 
   </article>
 

@@ -7,6 +7,7 @@
   <h1>{% trans "Create a new gondole row" %}</h1>
   <form action="" method="post">{% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="{% trans "Save" %}" />
+    <input type="submit" value="{% trans "Save" %}" /> |
+    <a href="{% url "gondole:gondole-list" %}">{% trans "Cancel" %}</a>
   </form>
 {% endblock %}

@@ -1,0 +1,21 @@
+{% extends "./base.html" %}
+
+{% load i18n %}
+{% load render_table from django_tables2 %}
+
+
+{% block extra_nav %}
+  <li><a href="{% url "gondole:gondole-list" %}">{% trans "Gondole row dashboard homepage" %}</a></li>
+  <li><a href="{% url "gondole:gondole-create" %}">{% trans "Create a gondole row" %}</a></li>
+  <li><a href="{% url "gondole:gondola-create" %}">{% trans "Create a gondola image" %}"</a></li>
+{% endblock %}
+
+{% block main_section %}
+  <h1>{% trans "Build your gondole grid" %}</h1>
+  <h2>{% trans "Active gondole rows" %}</h2>
+  {% render_table active_gondole_table %}
+
+  <h2>{% trans "Inactive gondole rows" %}</h2>
+  {% render_table gondole_table %}
+
+{% endblock %}

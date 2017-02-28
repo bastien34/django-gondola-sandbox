@@ -1,0 +1,11 @@
+{% load i18n %}
+
+{{ row.label }}: <a href="{% url 'gondole:gondole-update' row.pk %}">{% trans "Edit" %}</a> |
+<a href="{% url 'gondole:gondole-delete' row.pk %}">{% trans "Delete" %}</a>
+<ul>
+  {% for image in images %}
+    <li class="row-display">
+      <a href="{% url 'gondole:gondola-update' image.pk %}"><img src="{{ image.url }}" /></a>
+    </li>
+  {% endfor %}
+</ul>

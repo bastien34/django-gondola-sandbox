@@ -41,6 +41,9 @@ class Gondola(models.Model):
     def url(self):
         return self.image.url
 
+    def get_absolute_url(self):
+        return reverse('gondole:gondole-list')
+
 
 class GondoleRow(models.Model):
     """
@@ -104,4 +107,4 @@ class GondoleRow(models.Model):
 
     def get_absolute_url(self):
         # return reverse('dashboard', kwargs={'pk': self.pk})
-        return reverse('gondole:dashboard')
+        return reverse('gondole:gondole-list')

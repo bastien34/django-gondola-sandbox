@@ -15,8 +15,8 @@
 <nav>
   <ul>
     <li><a href="{% url 'index' %}">Homepage</a></li>
-    <li><a href="/admin">Django admin</a>
-    </li>
+    <li><a href="/admin">Django admin</a></li>
+    {% block extra_nav %}{% endblock %}
   </ul>
 </nav>
 
