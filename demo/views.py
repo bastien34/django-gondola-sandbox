@@ -16,7 +16,7 @@ class HomePageView(TemplateView):
             try:
                 call_command('loaddata', 'fixtures/gondole.json')
             except CommandError:
-                raise CommandError('Zut')
+                raise CommandError("Bouh, don't know what's wrong here")
 
             # copy files
             src = 'static/img/'
