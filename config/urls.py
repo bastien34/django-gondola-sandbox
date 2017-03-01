@@ -14,7 +14,7 @@ from demo.views import homepage
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homepage, name='index'),
-    url(r'^gondole/', include('gondola_grid.urls', namespace='gondole')),
+    url(r'^gondola/', include('gondola.urls', namespace='gondola')),
 ]
 
 if settings.DEBUG:

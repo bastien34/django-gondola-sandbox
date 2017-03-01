@@ -1,6 +1,6 @@
 [
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 1,
     "fields": {
         "label": "Chameleon",
@@ -11,7 +11,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 2,
     "fields": {
         "label": "Toucan",
@@ -22,7 +22,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 3,
     "fields": {
         "label": "Monkey",
@@ -33,7 +33,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 4,
     "fields": {
         "label": "Laying on the back",
@@ -44,7 +44,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 5,
     "fields": {
         "label": "Kiss me",
@@ -55,7 +55,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 6,
     "fields": {
         "label": "My tongue",
@@ -66,7 +66,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 7,
     "fields": {
         "label": "One family",
@@ -77,7 +77,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 8,
     "fields": {
         "label": "Sadness",
@@ -88,7 +88,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 9,
     "fields": {
         "label": "Am I pretty?",
@@ -99,7 +99,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondola",
+    "model": "gondola.gondola",
     "pk": 13,
     "fields": {
         "label": "Who's that?",
@@ -110,7 +110,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondolerow",
+    "model": "gondola.gondolerow",
     "pk": 1,
     "fields": {
         "active": true,
@@ -125,7 +125,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondolerow",
+    "model": "gondola.gondolerow",
     "pk": 2,
     "fields": {
         "active": true,
@@ -141,7 +141,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondolerow",
+    "model": "gondola.gondolerow",
     "pk": 3,
     "fields": {
         "active": true,
@@ -158,7 +158,7 @@
     }
 },
 {
-    "model": "gondola_grid.gondolerow",
+    "model": "gondola.gondolerow",
     "pk": 4,
     "fields": {
         "active": true,

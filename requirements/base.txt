@@ -1,4 +1,5 @@
-Django==1.10.5
+Django>=1.10
 Unipath==1.1
-Pillow==4.0.0
-django-tables2==1.4.1
+Pillow>=4.0.0
+django-tables2>=1.4
+git+https://github.com/bastien34/django-gondola.git

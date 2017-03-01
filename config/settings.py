@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gondola_grid',
     'django_extensions',
     'django_tables2',
+    'gondola',
     'demo',
 ]
 
