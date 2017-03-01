@@ -1,23 +1,28 @@
-============
-Gondole grid
-============
+==============
+Django-gondola
+==============
 
 
-Gondole grid is an elegant way to present categories, sections
-or whatever on a page.
+Django-gondola is a Django app.
+
+It aims to present in an elegant grid categories, sections, product ranges...
+or whatever on a simple page, ideally on a homepage.
 
 Fully writen in HTML - CSS3. It is responsive and animated.
+
 
 How to install
 --------------
 
-`virtualenv -p /usr/bin/python3 gondola`
+.. code:: python
 
-`pip install -r requirements/development.txt`
+    ``virtualenv -p /usr/bin/python3 gondola``
 
-`./manage.py migrate`
+    ``pip install -r requirements/development.txt``
 
-`./manage.py runserver`
+    ``./manage.py migrate``
+
+    ``./manage.py runserver``
 
 
 You can load demo data to test the app and appreciate what it does.
