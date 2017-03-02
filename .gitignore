@@ -9,3 +9,5 @@ __pycache__
 # nodeenv
 js_virtualenv/
 node_modules/
+
+django-gondola
