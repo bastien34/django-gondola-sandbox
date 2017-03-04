@@ -12,9 +12,9 @@ from django.views.static import serve
 from demo.views import homepage
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^$', homepage, name='index'),
-    url(r'^gondola/', include('gondola.urls', namespace='gondola')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^gondola/dashboard/', include('gondola.dashboard.urls')),
 ]
 
 if settings.DEBUG:
